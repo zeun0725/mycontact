@@ -20,14 +20,17 @@ class PersonRepositoryTest {
         Person person = new Person();
         person.setName("jieun");
         person.setAge(27);
+        person.setBloodType("AB");
 
         personRepository.save(person);
 
-//        System.out.println(personRepository.findAll());
+        System.out.println(personRepository.findAll());
+
         List<Person> people = personRepository.findAll();
         assertThat(people.size()).isEqualTo(1);
         assertThat(people.get(0).getName()).isEqualTo("jieun");
         assertThat(people.get(0).getAge()).isEqualTo(27);
+        assertThat(people.get(0).getBloodType()).isEqualTo("AB");
 
     }
 
