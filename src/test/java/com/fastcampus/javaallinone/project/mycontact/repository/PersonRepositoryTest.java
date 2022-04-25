@@ -38,14 +38,9 @@ class PersonRepositoryTest {
     }
 
     @Test
-    void constructorTest() {
-        Person person = new Person("martine", 10);
-    }
-
-    @Test
     void hashCodeAndEquals() {
-        Person person1 = new Person("martine", 10);
-        Person person2 = new Person("martine", 10);
+        Person person1 = new Person("martine", 10, "A");
+        Person person2 = new Person("martine", 10, "A");
 
         System.out.println(person1.equals(person2));
         System.out.println(person1.hashCode());
